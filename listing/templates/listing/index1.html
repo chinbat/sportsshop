@@ -1,0 +1,10 @@
+<ul>
+{% for post in posts %}
+	<li>
+		{% load staticfiles %}
+		<img src="{% static "listing/1.jpg"  %}"/>
+		<a href="/listing/{{post.id}}/"><img src="{% static "listing/1.jpg" %}"/></a>
+		<p>{{post.post_text}}</p>
+	</li>
+{% endfor %}
+</ul>
