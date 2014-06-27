@@ -1,9 +1,43 @@
-<ul>
-{% for post in posts %}
-	<li>
-		{% load staticfiles %}
-		<a href="/listing/{{post.id}}/"><img src="{% static "listing/1.jpg"%}"/></a>
-		<p>{{post.post_text}}</p>
-	</li>
-{% endfor %}
-</ul>
+<!DOCTYPE html>
+
+{% load staticfiles %}
+<html lang="ja">
+<head>
+	<script type="text/javascript" src="{% static "listing/Rtoaster.js" %}></script>
+	<script type="text/javascript">
+		Rtoaster.init("Your contract ID");
+		Rtoaster.track();
+	</script>
+	<meta charset="utf-8">
+	<title> Sports Shop </title>
+	<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static "listing/main.css"  %}">
+</head>
+<body>
+ <div id="top_page">
+ <h1>Hello, Welcome to our Sports News Site!</h1>
+ </div>
+ <div class="post">
+  <ul>
+  {% for post in posts %}
+   <li>
+	<div>
+	{% load staticfiles %}
+	{% with id=post.id|stringformat:"s" %}
+	{% with 'listing/'|add:id|add:'.jpg' as image  %}
+	<h1>{{post.image}}</h1>
+	<a href="/listing/{{post.id}}/"><img src="{% static image  %}" width="150"/></a>
+	{% endwith %}
+	{% endwith %}
+	<p>{{post.post_text}}</p>
+	</div>
+   </li>
+  {% endfor %}
+  </ul>
+ </div>
+<script type="text/javascript">
+Rtoaster.recommendNow("top_page”);
+</script>
+</body>
+</html>
