@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	</head>
+	<body>
+		{% load staticfiles %}
+		<p><img src="http://chinbat.org/blog/wp-content/uploads/2014/06/cropped-top_mt_fuji.jpg"/></p>
+	</body>
+</html>
