@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
-{% load staticfiles %}
 <html lang="ja">
 <head>
-	<script type="text/javascript" src="{% static "listing/Rtoaster.js" %}></script>
+	{% load staticfiles %}
+	<script type="text/javascript" src="{% static "listing/Rtoaster.js" %}"></script>
 	<script type="text/javascript">
-		Rtoaster.init("Your contract ID");
+		Rtoaster.init("RTA-4854-6885a38dfd6c");
 		Rtoaster.track();
 	</script>
 	<meta charset="utf-8">
@@ -37,7 +37,7 @@
   </ul>
  </div>
 <script type="text/javascript">
-Rtoaster.recommendNow("top_page”);
+Rtoaster.recommendNow("top_page");
 </script>
 </body>
 </html>
