@@ -6,9 +6,11 @@ from listing.models import Post
 
 #def show(request, post_id):
 #    return HttpResponse('This is post %s', % post_id)
-def show(request, post_id):
+def show(request,post_id):
     post = Post.objects.get(id=post_id)
-    return HttpResponse('This is post: %s' % post.post_text)
+    template = loader.get_template('listing/post.html')
+    context = RequestContext(request, {'post': post,})
+    return HttpResponse(template.render(context))
 
 def index(request):
     posts = Post.objects.all()

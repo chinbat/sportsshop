@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+	{% load staticfiles %}
+	<script type="text/javascript" src="{% static "listing/Rtoaster.js" %}"></script>
+	<script type="text/javascript">
+		Rtoaster.init("RTA-4854-6885a38dfd6c");
+		Rtoaster.track();
+	</script>
+	<meta charset="utf-8">
+	<title> Post page </title>
+	<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static "listing/main.css"  %}">
+</head>
+<body>
+<h1>{{post.image}}</h1>
+
+
+<div id="post_auto">
+この記事を読んだ人はこの記事も読んでいる:<br>
+<div id="post_auto_1">
+</div>	
+</div>
+<script type="text/javascript">
+Rtoaster.recommendNow("item_auto");
+</script>
+</body>
+</html>
