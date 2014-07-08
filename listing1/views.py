@@ -4,8 +4,6 @@ from django.template import RequestContext, loader
 
 from listing1.models import Post1
 
-#def show(request, post_id):
-#    return HttpResponse('This is post %s', % post_id)
 def show(request,post_id):
     post = Post1.objects.get(id=post_id)
     template = loader.get_template('listing1/post.html')
