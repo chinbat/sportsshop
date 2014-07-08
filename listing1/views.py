@@ -20,3 +20,9 @@ def ranking(request):
     template = loader.get_template('listing1/ranking.html')
     context = RequestContext(request)
     return HttpResponse(template.render(context))
+
+def shop(request):
+    template = loader.get_template('listing1/shop.html')
+    context = RequestContext(request)
+    return HttpResponse(template.render(context))
+

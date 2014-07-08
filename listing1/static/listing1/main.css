@@ -1,19 +1,32 @@
-.post h1{
+body{
+	/*background-image: url('whole_bg.jpg')*/
+}
+
+
+.post {
 	color: blue;
 	font-size: 36px;
 }
 
-.header {
-	/*:height: 400px;*/
-	background-image: url('background.jpg');
+.post li{
+	display: block;
 }
+
 .header h1{
-	color: red;
+	color: white;
+	background-image: url('background.jpg');
+	text-align: center;
 	font-size: 48px;
+}
+
+.header p{
+
 }
 
 .nav li{
 	padding: 14px 10px;
 	display: inline;
 	text-transform: uppercase;
+	color: black;
 }
+
