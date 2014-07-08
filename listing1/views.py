@@ -15,3 +15,8 @@ def index(request):
     template = loader.get_template('listing1/index.html')
     context = RequestContext(request, {'posts': posts,})
     return HttpResponse(template.render(context))
+
+def ranking(request):
+    template = loader.get_template('listing1/ranking.html')
+    context = RequestContext(request)
+    return HttpResponse(template.render(context))
