@@ -23,7 +23,7 @@
 .post h2{
 	/*text-align:center;*/
 	color: #58ACFA;
-	font-size: 24px;
+	font-size: 16px;
 }
 
 .post .post-image{
@@ -40,9 +40,26 @@
 	display: block;
 }
 
+.post .container .recommend{
+	margin-top: 1cm;
+	font-size: 16px;
+	color: red;
+}
+
+.post .container .post-text p{
+	font-size: 12px;
+	margin-top 1cm;
+	color: black;
+}
+
+.post .container .post-text .date{
+	font-size: 12px;
+	text-align: left;
+	color: #58ACFA;
+}
 
 .footer p{
 	text-align: center;
 	font-size: 12px;
-	color: #58ACFA;
+	color: #59ACFA;
 }

@@ -17,24 +17,44 @@
 	{% include "listing1/header.html"  %}
  	<div class="post">
 	<div class="container">
+	<div class="col-md-8"	
   		<ul>
   			{% for post in posts %}
    			<li>
 			<div class="post-content">
 			<a href="/listing1/{{post.id}}/"><h2>{{post.title}}</h2></a>
 				<div class="post-image">
-				<a href="/listing1/{{post.id}}/"><img src="/media/{{post.image}}" width="300"/></a>
+				<a href="/listing1/{{post.id}}/"><img src="/media/{{post.image}}" width="400"/></a>
 				</div>
 				<p>{{post.pub_date}}</p>
 			</div>
    			</li>
   			{% endfor %}
   		</ul>
- 	</div>
 	</div>
-
+	<div class="col-md-4">
+		<ul>
+			<li>
+				<div class="recommend">
+					Best news:
+				</div>
+			</li>
+                        <div id="best_news">
+                        <li>
+                                <div id="best_news_1">
+                                </div>
+                        </li>
+                        <li>
+                                <div id="best_news_2">
+                                </div>
+                        </li>
+                        </div>
+		</ul>
+	</div>
+	</div>
+	</div>
 	<script type="text/javascript">
-		Rtoaster.recommendNow("top_page");
+		Rtoaster.recommendNow("best_news");
 	</script>
 	{% include "listing1/footer.html"  %}
 </body>

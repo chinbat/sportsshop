@@ -15,20 +15,40 @@
 	<link rel="stylesheet" href="{% static "listing1/main.css"  %}">
 </head>
 <body>
-<h1>{{post.title}}</h1>
-<img src="/media/{{post.image}}" width="150"/>
-<p>{{post.post_txt}}</p>
-
-
-<div id="item_auto">
-この記事を読んだ人はこの記事も読んでいる:<br>
-<div id="item_auto_1">
-</div>	
-<div id="item_auto_2">
-</div>	
-</div>
+	{% include "listing1/header.html" %}
+	<div class="post">
+	<div class="container">
+		<ul>
+			<li>
+			<h2>{{post.title}}</h2>
+				<div class="post-image">
+				<img src="/media/{{post.image}}" width="400"/>
+				</div>
+				<span class="date"><p>{{post.pub_date}}</p></span>
+				<div class="post-text">
+				<p>{{post.post_txt}}</p>
+				
+				</div>
+			</li>
+			
+			<div id="item_auto" class="recommend">
+				you may also like:<br>
+			<li>
+				<div id="item_auto_1">
+				</div>	
+			</li>
+			<li>
+				<div id="item_auto_2">
+				</div>
+			</li>	
+			</div>
+		</ul>
+	</div>
+	</div>
 <script type="text/javascript">
-Rtoaster.recommendNow("item_auto");
+	Rtoaster.recommendNow("item_auto");
 </script>
+
+{% include "listing1/footer.html"  %}
 </body>
 </html>

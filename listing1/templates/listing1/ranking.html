@@ -15,15 +15,30 @@
 	<link rel="stylesheet" href="{% static "listing1/main.css"  %}">
 </head>
 <body>
-	<h1>Best news:</h1>
-	<div id="best_news">
-	<div id="best_news_1">
+	{% include "listing1/header.html"  %}
+	<div class="post">
+	<div class="container">
+		<ul>
+			<li>
+			<div class="recommend">
+				Best news:
+			</div>
+			</li>
+			<div id="best_news">
+			<li>	
+				<div id="best_news_1">
+				</div>
+			</li>
+			<li>
+				<div id="best_news_2">
+				</div>
+			</li>
+			</div>
+		</ul>
 	</div>
-	<div id="best_news_2">
 	</div>
-	</div>
-	<script type="text/javascript">
-		Rtoaster.recommendNow("best_news");
-	</script>
+<script type="text/javascript">
+	Rtoaster.recommendNow("best_news");
+</script>
 </body>
 </html>

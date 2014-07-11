@@ -11,7 +11,7 @@ def show(request,post_id):
     return HttpResponse(template.render(context))
 
 def index(request):
-    posts = Post1.objects.all().order_by('-pub_date')
+    posts = Post1.objects.filter(deleted=False).order_by('-pub_date')
     template = loader.get_template('listing1/index.html')
     context = RequestContext(request, {'posts': posts,})
     return HttpResponse(template.render(context))
