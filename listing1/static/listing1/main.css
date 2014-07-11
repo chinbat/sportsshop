@@ -1,32 +1,48 @@
-body{
-	/*background-image: url('whole_bg.jpg')*/
+.header li{
+	padding: 14px 10px;
+	display: inline;
+	text-transform: uppercase;
+	color: blue;
 }
 
+.title .container{
+	color: white;
+	background-image: url('whole_bg.jpg');
+}
 
-.post {
-	color: blue;
-	font-size: 36px;
+.title .container h1{
+	font-size: 32px;
+	text-align: center;
+}
+
+.title .container p{
+	font-size: 16px;
+	text-align: right;
+}
+
+.post h2{
+	/*text-align:center;*/
+	color: #58ACFA;
+	font-size: 24px;
+}
+
+.post .post-image{
+	/*text-align:center;*/
+}
+
+.post p{
+	/*text-align:center;*/
+	font-size: 12px;
+	color: #58ACFA;
 }
 
 .post li{
 	display: block;
 }
 
-.header h1{
-	color: white;
-	background-image: url('background.jpg');
+
+.footer p{
 	text-align: center;
-	font-size: 48px;
+	font-size: 12px;
+	color: #58ACFA;
 }
-
-.header p{
-
-}
-
-.nav li{
-	padding: 14px 10px;
-	display: inline;
-	text-transform: uppercase;
-	color: black;
-}
-

@@ -14,34 +14,18 @@
 	<link rel="stylesheet" href="{% static "listing1/main.css"  %}">
 </head>
 <body>
-	<div class="nav">
-	<div class="container">
-	<ul class="pull-left">
-		<li><a href="#">News</a></li>
-		<li><a href="/listing1/ranking/">ranking</a></li>
-		<li><a href="/listing1/shop/">Shop</a></li>
-		<li><a href="/admin">Admin</a></li>
-		<li>About</li>
-	</ul>
-	</div>
-	</div>
-	<div id="top_page" class="header">
-	<div class="container">
- 		<h1>Hello, Welcome to our Sports News Site!</h1>
- 		<p>バスケットボールやサッカーニュースはこのサイトで</p>
-	</div>
-	</div>
-
-
+	{% include "listing1/header.html"  %}
  	<div class="post">
 	<div class="container">
   		<ul>
   			{% for post in posts %}
    			<li>
-			<div>
-				<h1>{{post.title}}</h1>
-				<a href="/listing1/{{post.id}}/"><img src="/media/{{post.image}}" width="150"/></a>
-				<p>{{post.post_txt}}</p>
+			<div class="post-content">
+			<a href="/listing1/{{post.id}}/"><h2>{{post.title}}</h2></a>
+				<div class="post-image">
+				<a href="/listing1/{{post.id}}/"><img src="/media/{{post.image}}" width="300"/></a>
+				</div>
+				<p>{{post.pub_date}}</p>
 			</div>
    			</li>
   			{% endfor %}
@@ -52,5 +36,6 @@
 	<script type="text/javascript">
 		Rtoaster.recommendNow("top_page");
 	</script>
+	{% include "listing1/footer.html"  %}
 </body>
 </html>
