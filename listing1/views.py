@@ -26,3 +26,14 @@ def shop(request):
     context = RequestContext(request)
     return HttpResponse(template.render(context))
 
+def football(request):
+    template = loader.get_template('listing1/rank_2.html')
+    context = RequestContext(request)
+    return HttpResponse(template.render(context))
+
+def basketball(request):
+    template = loader.get_template('listing1/rank_1.html')
+    context = RequestContext(request)
+    return HttpResponse(template.render(context))
+
+

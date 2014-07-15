@@ -9,25 +9,32 @@
 		Rtoaster.track();
 	</script>
 	<meta charset="utf-8">
-	<title> Ranking page </title>
+	<title> Ranking Football</title>
 	<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
 	{% load staticfiles %}
 	<link rel="stylesheet" href="{% static "listing1/main.css"  %}">
 </head>
 <body>
-	{% include "listing1/header.html"  %}
+	<div class="post">
 	<div class="container">
-	<div class="col-md-6">
-	<iframe src="/listing1/football/" width="600" height="400" frameBorder="0">
-	</iframe>
-	</div>
-	<div class="col-md-6">
-	<iframe src="/listing1/basketball/" width="600" height="400" frameBorder="0">
-	</iframe>
+		<ul>
+			<li>
+			<div class="recommend">
+				Football top news:
+			</div>
+			</li>
+			<div id="best_football">
+			<li>	
+				<div id="best_football_1">
+				</div>
+			</li>
+			</div>
+		</ul>
 	</div>
 	</div>
 <script type="text/javascript">
-	Rtoaster.recommendNow();
+	Rtoaster.category("2")
+	Rtoaster.recommendNow("best_football");
 </script>
 </body>
 </html>
