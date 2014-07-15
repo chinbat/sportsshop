@@ -18,6 +18,7 @@ class User1(models.Model):
 class Post1(models.Model):
     title = models.CharField(max_length=100)
     pub_date = models.DateTimeField(auto_now_add=True,blank=True)
+    #pub_date = models.DateTimeField(blank=True)
     last_edited_date = models.DateTimeField(auto_now=True,blank=True)
     deleted = models.BooleanField()
     image = models.ImageField(upload_to="images/")
@@ -25,7 +26,7 @@ class Post1(models.Model):
     category = models.ForeignKey(Category1)
     post_txt = models.CharField(max_length=1000)
     def __unicode__(self):
-        return self.title
+        return str(self.title)
 
 class Comment1(models.Model):
     post = models.ForeignKey(Post1)
