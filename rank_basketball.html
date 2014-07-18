@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+	{% load staticfiles %}
+	<script type="text/javascript" src="{% static "listing1/Rtoaster.js" %}"></script>
+	<script type="text/javascript">
+		Rtoaster.init("RTA-4854-6885a38dfd6c");
+		Rtoaster.track();
+	</script>
+	<meta charset="utf-8">
+	<title> Ranking Basketball</title>
+	<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static "listing1/main.css"  %}">
+</head>
+<body>
+	<div class="post">
+	<div class="container">
+		<ul>
+			<li>
+			<div class="recommend">
+				 Basketball top news:
+			</div>
+			</li>
+			<div id="best_basketball">
+			<li>	
+				<div id="best_basketball_1">
+				</div>
+			</li>
+			</div>
+		</ul>
+	</div>
+	</div>
+<script type="text/javascript">
+	Rtoaster.category("1")
+	Rtoaster.recommendNow("best_basketball");
+</script>
+</body>
+</html>
