@@ -11,28 +11,51 @@
 	<meta charset="utf-8">
 	<title> Sports Shop </title>
 	<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-	{% load staticfiles %}
 	<link rel="stylesheet" href="{% static "listing1/main.css"  %}">
 </head>
 <body>
- <div id="top_page">
- <h1>Hello, Welcome to our Sports News Site!</h1>
- </div>
- <div class="post">
-  <ul>
-  {% for post in posts %}
-   <li>
-	<div>
-	<h1>{{post.title}}</h1>
-	{% load staticfiles %}
-	<a href="/listing1/{{post.id}}/"><img src="/media/{{post.image}}" width="150"/></a>
-	<p>{{post.post_txt}}</p>
+	{% include "listing1/header.html"  %}
+ 	<div class="post">
+	<div class="container">
+	<div class="col-md-8"	
+  		<ul>
+  			{% for post in posts %}
+   			<li>
+			<div class="post-content">
+			<a href="/listing1/{{post.id}}/"><h2>{{post.title}}</h2></a>
+				<div class="post-image">
+				<a href="/listing1/{{post.id}}/"><img src="/media/{{post.image}}" width="400"/></a>
+				</div>
+				<p>{{post.pub_date}}</p>
+			</div>
+   			</li>
+  			{% endfor %}
+  		</ul>
 	</div>
-   </li>
-  {% endfor %}
-  </ul>
- </div><script type="text/javascript">
-Rtoaster.recommendNow("top_page");
-</script>
+	<div class="col-md-4">
+		<ul>
+			<li>
+				<div class="recommend">
+					Top news:
+				</div>
+			</li>
+                        <div id="best_news">
+                        <li>
+                                <div id="best_news_1">
+                                </div>
+                        </li>
+                        <li>
+                                <div id="best_news_2">
+                                </div>
+                        </li>
+                        </div>
+		</ul>
+	</div>
+	</div>
+	</div>
+	<script type="text/javascript">
+		Rtoaster.recommendNow("best_news");
+	</script>
+	{% include "listing1/footer.html"  %}
 </body>
 </html>

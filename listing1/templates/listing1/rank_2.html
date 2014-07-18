@@ -9,46 +9,32 @@
 		Rtoaster.track();
 	</script>
 	<meta charset="utf-8">
-	<title> Post page </title>
+	<title> Ranking Football</title>
 	<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
 	{% load staticfiles %}
 	<link rel="stylesheet" href="{% static "listing1/main.css"  %}">
 </head>
 <body>
-	{% include "listing1/header.html" %}
 	<div class="post">
 	<div class="container">
 		<ul>
 			<li>
-			<h2>{{post.title}}</h2>
-				<div class="post-image">
-				<img src="/media/{{post.image}}" width="400"/>
-				</div>
-				<span class="date"><p>{{post.pub_date}}</p></span>
-				<div class="post-text">
-				<p>{{post.post_txt}}</p>
-				
+			<div class="recommend">
+				Football top news:
+			</div>
+			</li>
+			<div id="best_football">
+			<li>	
+				<div id="best_football_1">
 				</div>
 			</li>
-			
-			<div id="item_auto" class="recommend">
-				you may also like:<br>
-			<li>
-				<div id="item_auto_1">
-				</div>	
-			</li>
-			<li>
-				<div id="item_auto_2">
-				</div>
-			</li>	
 			</div>
 		</ul>
 	</div>
 	</div>
 <script type="text/javascript">
-	Rtoaster.recommendNow("item_auto");
+	Rtoaster.category("2")
+	Rtoaster.recommendNow("best_football");
 </script>
-
-{% include "listing1/footer.html"  %}
 </body>
 </html>

@@ -11,7 +11,29 @@ def show(request,post_id):
     return HttpResponse(template.render(context))
 
 def index(request):
-    posts = Post1.objects.all()
+    posts = Post1.objects.filter(deleted=False).order_by('-pub_date')
     template = loader.get_template('listing1/index.html')
     context = RequestContext(request, {'posts': posts,})
     return HttpResponse(template.render(context))
+
+def ranking(request):
+    template = loader.get_template('listing1/ranking.html')
+    context = RequestContext(request)
+    return HttpResponse(template.render(context))
+
+def shop(request):
+    template = loader.get_template('listing1/shop.html')
+    context = RequestContext(request)
+    return HttpResponse(template.render(context))
+
+def football(request):
+    template = loader.get_template('listing1/rank_2.html')
+    context = RequestContext(request)
+    return HttpResponse(template.render(context))
+
+def basketball(request):
+    template = loader.get_template('listing1/rank_1.html')
+    context = RequestContext(request)
+    return HttpResponse(template.render(context))
+
+
